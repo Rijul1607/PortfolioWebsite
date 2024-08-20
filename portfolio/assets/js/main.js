@@ -1,5 +1,11 @@
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-
+const scrollHeader = () =>{
+    const header = document.getElementById('header')
+    // Add a class if the bottom offset is greater than 50 of the viewport
+    this.scrollY >= 50 ? header.classList.add('scroll-header') 
+                       : header.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
 
 /*=============== SERVICES MODAL ===============*/
 const modalViews=document.querySelectorAll('.services__modal'),
@@ -118,4 +124,12 @@ themeButton.addEventListener('click', () => {
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-
+const sr= ScrollReveal({
+    origin:'top',
+    distance:'60px',
+    duration:2500,
+    delay:400,
+})
+sr.reveal('.home__data')
+sr.reveal('.home__handle',{delay:700})
+sr.reveal('.home__social, .home__scroll',{delay:900,origin:'bottom'})
