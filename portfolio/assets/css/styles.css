@@ -429,7 +429,7 @@ margin-bottom: 1.5rem;
 .skills__name{
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  line-height: 10px;
+  line-height: 14px;
 }
 .skills__level{
   font-size: var(--tiny-font-size);
